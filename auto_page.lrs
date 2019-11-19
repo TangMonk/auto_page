@@ -1,0 +1,18 @@
+LazarusResources.Add('float_page_html','TXT',[
+  #239#187#191'<div id="pagination" style="position:absolute;top:328.5px;left:8'
+  +'00px;height:181.5px;width:14.1px;padding:10px 10px 10px 8.4px;background:rg'
+  +'b(137,210,148)">'#13#10#9'<a style="display:block;margin-right:3px;color:wh'
+  +'ite;text-decoration: none;" href="$1">'#228#184#138#228#184#128#233#161#181
+  +'</a>'#13#10#9'<br>'#13#10#9'<a style="display:block;margin-right:3px;color:'
+  +'white; text-align: center;text-decoration: none;" href="$3">'#231#155#174
+  +#229#189#149'</a>'#13#10#9'<br>'#13#10#9'<a style="display:block;margin-righ'
+  +'t:3px;color:white;text-decoration: none;" href="$2">'#228#184#139#228#184
+  +#128#233#161#181'</a>'#13#10'</div>'#13#10'<script type="text/javascript">'
+  +#13#10#9'var pagination = document.getElementById(''pagination'')'#13#10#9'i'
+  +'nit()'#13#10#9'document.addEventListener(''scroll'', function(e){'#13#10#9#9
+  +'init()'#13#10#9'})'#13#10#13#10#9'function init(){'#13#10#9#9'var clientHei'
+  +'ght = document.body.clientHeight'#13#10#9#9'var scrollTop = document.body.s'
+  +'crollTop'#13#10#9#9'var bottomTop = scrollTop + clientHeight'#13#10#9#9'pag'
+  +'ination.style.top = bottomTop - (clientHeight / 2) + ''px'''#13#10#9'}'#13
+  +#10'</script>'
+]);

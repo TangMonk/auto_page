@@ -1,0 +1,24 @@
+﻿<div id="pagination" style="position:absolute;top:328.5px;left:800px;width:14.1px;padding:10px 10px 10px 8.4px;background:rgb(204, 102, 0)">
+	<a style="display:block;margin-right:3px;color:white;text-decoration: none;margin: 10px 0;" href="$1">上一页</a>
+	<a style="display:block;margin-right:3px;color:white; text-align: center;text-decoration: none;margin: 10 0px;" href="$3">目录</a>
+	<a style="display:block;margin-right:3px;color:white;text-decoration: none;margin: 10px 0 ;" href="$2">下一页</a>
+</div>
+<script type="text/javascript">
+	var pagination = document.getElementById('pagination')
+	// var allHeight = 0
+	// pagination.querySelectorAll('a').forEach(function(a){
+	// 	allHeight = allHeight + a.offsetHeight
+	// })
+	// pagination.style.height = allHeight + 21 * 2
+	init()
+	document.addEventListener('scroll', function(e){
+		init()
+	})
+
+	function init(){
+		var clientHeight = document.body.clientHeight
+		var scrollTop = document.body.scrollTop
+		var bottomTop = scrollTop + clientHeight
+		pagination.style.top = bottomTop - (clientHeight / 2) + 'px'
+	}
+</script>
