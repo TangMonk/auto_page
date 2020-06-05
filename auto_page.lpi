@@ -14,8 +14,10 @@
         <DpiAware Value="True"/>
       </XPManifest>
       <Icon Value="0"/>
-      <Resources Count="1">
+      <Resources Count="3">
         <Resource_0 FileName="res\float_page_html.txt" Type="RCDATA" ResourceName="FLOAT_PAGE_HTML"/>
+        <Resource_1 FileName="res\index.php" Type="RCDATA" ResourceName="INDEX.PHP"/>
+        <Resource_2 FileName="res\titles.txt" Type="RCDATA" ResourceName="TITLES"/>
       </Resources>
     </General>
     <BuildModes Count="3">
@@ -52,11 +54,6 @@
               <TrashVariables Value="True"/>
               <UseExternalDbgSyms Value="True"/>
             </Debugging>
-            <Options>
-              <Win32>
-                <GraphicApplication Value="True"/>
-              </Win32>
-            </Options>
           </Linking>
         </CompilerOptions>
       </Item2>

@@ -7,6 +7,7 @@ object Form1: TForm1
   Caption = '自动添加上下页'
   ClientHeight = 240
   ClientWidth = 320
+  FormStyle = fsSystemStayOnTop
   OnCreate = FormCreate
   OnDropFiles = FormDropFiles
   LCLVersion = '2.0.6.0'

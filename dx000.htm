@@ -1,0 +1,57 @@
+<html>
+<head>
+<script> 
+   //js上一页 下一页 代码
+   //说明：文件名必须是abc-123.htm的格式，分为四个部分：其中abc是任意名字；-是连字符不能少；123只能是数字；后缀必须是.htm
+var url=window.location.href; 
+var n=url.split("/")[url.split("/").length-1].split(".")[0];  
+var num= n.replace(/[^0-9]/ig,"");
+var pre=url.lastIndexOf("-")+1;
+var pre2=url.substring(0,pre);
+
+   //上一页
+   function up(){
+     var pageno=num-1;
+     if(pageno==0){
+         alert("当前已经是第一页!");
+         return false;
+     }
+     window.location.href=pre2+pageno+".htm";
+   }
+   //下一页
+   function down(){ 
+     var pageno=num-(-1);
+     if(pageno==1000){
+         alert("当前已经是最后一页!");
+         return false;
+     }
+     window.location.href=pre2+pageno+".htm";
+   }
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>菩提心网站</title>
+<script language="javascript">
+setTimeout(window.location="index.php",0)
+</script>
+<!-- putixin.com Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?13dd5c046c14d2de56c550ab86bb904e";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+
+
+
+<a href="http://www.putixin.com">佛教菩提心</a>
+<a href="http://www.putixin.com/fxjj.htm">佛学讲记</a>
+<a href="http://www.putixin.com/fjxlx.htm">佛教心理学</a>
+<a href="http://www.putixin.com/chan/chan-index.htm">佛学禅定</a>
+
+</body></html>
