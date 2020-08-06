@@ -39,11 +39,13 @@ var
   titleResourceStream: TResourceStream;
   titleFile: TStringList;
 begin
-  titleResourceStream :=
+  if not FileExists(GetCurrentDir + '\' + 'titles.txt') then begin
+    titleResourceStream :=
     TResourceStream.Create(HInstance, 'TITLES', RT_RCDATA);
-  titleFile := TStringList.Create;
-  titleFile.LoadFromStream(titleResourceStream);
-  titleFile.SaveToFile(GetCurrentDir + '\' + 'titles.txt');
+    titleFile := TStringList.Create;
+    titleFile.LoadFromStream(titleResourceStream);
+    titleFile.SaveToFile(GetCurrentDir + '\' + 'titles.txt');
+  end;
 end;
 
 procedure TForm1.FormDropFiles(Sender: TObject; const FileNames: array of string);
@@ -187,10 +189,12 @@ begin
       FileNumberReg.Free;
 
       //保存index.php文件
+
       indexphpString := ConvertEncoding(indexphpFile.text, GuessEncoding(indexphpFile.text), EncodingUTF8);
       indexphpString := indexphpString.Replace('text_to_replace', TitleValueName);
       indexphpFile.Text := ConvertEncoding(indexphpString, EncodingUTF8, GuessEncoding(indexphpFile.text));;
       indexphpFile.SaveToFile(FileDir + '\' + 'index.php');
+
 
       ProgressBar1.Position := 0;
     end

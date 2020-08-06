@@ -10,7 +10,7 @@ object Form1: TForm1
   FormStyle = fsSystemStayOnTop
   OnCreate = FormCreate
   OnDropFiles = FormDropFiles
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.8.0'
   object StringGrid1: TStringGrid
     Left = 0
     Height = 208
